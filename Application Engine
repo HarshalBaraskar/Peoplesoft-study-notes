@@ -1,2 +1,5 @@
 # AE sql action can have only one sql query.
 # AE steps always executes from first to last regardless of step number.
+# AE common error : Resource is not available and nowait is enabled or timeout occure.
+-This means some sql queries are fired on record which we are using in AE and those queries are not committed 
+-so the solution is to commit all queries performed on that record.
